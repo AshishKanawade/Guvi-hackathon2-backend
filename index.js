@@ -16,7 +16,7 @@ async function createconnection(){
 app.use(cors())
 app.use(express.json());
 app.get("/",(request,response)=>{
-    response.send("hello")
+    response.send("hello 1")
 })
 app.get("/cart",async(request,response)=>{
     const Client= await createconnection();

@@ -129,12 +129,12 @@ const data = [
     },
 ];
 
-app.get("/data", (request, response) => {
+app.get("/data", (_request, response) => {
     response.send("data");
 });
 
 
-app.get("/cart",async(request,response)=>{
+app.get("/cart",async(_request,response)=>{
     const Client= await createconnection();
     const result = await Client.db("flipkart").collection("cart").find({}).toArray();
     response.send(result);

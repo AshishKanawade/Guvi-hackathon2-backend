@@ -139,7 +139,6 @@ app.get("/cart",async(request,response)=>{
     response.send(result);
 })
 
-
 app.post("/cart",async(request,response)=>{
     const cartdata = request.body;
     console.log(cartdata)
